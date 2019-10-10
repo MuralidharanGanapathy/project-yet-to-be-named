@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Customer Sign-up Form</title>
+</head>
+<style>
+input[type=text],input[type=password],input[type=date]
+{
+border:none;
+outline:none;
+border-bottom:1px solid dodgerblue;
+padding:10px;
+
+}
+.clearfix
+{
+margin-top:20px;
+}
+body
+{
+font-family:verdana;
+}
+</style>
+<body>
+<center>
+<h2 style="color: blue">CUSTOMER SIGNUP PAGE</h2>
+	<hr>
+	<br>
+<form style="border:1px solid #ccc">
+<div class = "container">
+<table width="450px">
+</tr>
+<tr>
+<td>
+<label for="first_name">First Name</label>
+<td>
+</td>
+<td>
+<input type = "text" name ="first_name" placeholder="Enter your first name" maxlength="50" size="30" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="last_name">Last Name</label>
+<td>
+</td>
+<td>
+<input type = "text" name ="last_name" placeholder="Enter your first name" maxlength="50" size="30" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="dob">Date-Of-Birth</label>
+<td>
+</td>
+<td>
+<input type = "date" name ="dob" placeholder="Enter your date of birth" maxlength="50" size="30" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="mail_id">E-Mail</label>
+<td>
+</td>
+<td>
+<input type = "text" name ="mail_id" placeholder="Enter your mail-id" maxlength="50" size="30" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="place">Location</label>
+<td>
+</td>
+<td>
+<input type = "text" name ="place" placeholder="Enter your location" maxlength="50" size="30">
+</td>
+</tr>
+<tr>
+<td>
+<label for="pass">Password</label>
+<td>
+</td>
+<td>
+<input type = "password" name ="pass" placeholder="Enter password" maxlength="50" size="30" id = "passw" required>
+</td>
+</tr>
+<tr>
+<td>
+<label for="cpass">Confirm Password</label>
+<td>
+</td>
+<td>
+<input type = "password" name ="pass" placeholder="Re-type your password" maxlength="50" size="30" id = "confirm_passw" onchange = "validate()" required>
+</td>
+</tr>
+<script>
+function validate()
+{
+var password = document.getElementById("passw").value;
+var confirm_password = document.getElementById("confirm_passw").value;
+if (password != confirm_password)
+{
+window.alert("Reenter correct password");
+document.getElementById("confirm_passw").value = "";
+} 
+}
+</script>
+<tr>
+<td>
+<label for="Phone number">Phone Number</label>
+<td>
+</td>
+<td>
+<input type = "text" name ="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="50" size="30" required>
+</td>
+</tr>
+</table>
+<div class = "clearfix">
+      	<button type="submit" class="signupbtn">Sign Up</button>
+      	<button type="button" class="cancelbtn">Cancel</button>
+    </div>
+</div>
+</form>
+</body>
+</html>
